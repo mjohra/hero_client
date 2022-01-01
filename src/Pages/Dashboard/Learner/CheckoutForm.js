@@ -22,7 +22,7 @@ const CheckoutForm = ({ price }) => {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     axios
-      .post("http://localhost:5000/create-payment-intent", {
+      .post("https://hidden-sands-08000.herokuapp.com/create-payment-intent", {
         price,
       })
       .then(function (response) {

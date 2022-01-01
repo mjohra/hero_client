@@ -30,7 +30,7 @@ const Learner = () => {
     },
   ];
   useEffect(() => {
-    fetch("http://localhost:5000/learner")
+    fetch("https://hidden-sands-08000.herokuapp.com/learner")
       .then((res) => res.json())
       .then((data) => setInformation(data));
   }, []);

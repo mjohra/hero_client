@@ -197,7 +197,7 @@ const useFirebase = () => {
  //
  const saveUser = (email, displayName,age,area,address,phone,licencePhoto,nid,profile,carInfo, method) => {
   const user = { email, displayName,age,area,address,phone,licencePhoto,nid,profile,carInfo,userType:"Rider" };
-  fetch("http://localhost:5000/rider", {
+  fetch("https://hidden-sands-08000.herokuapp.com/rider", {
     method: method,
     headers: {
       "content-type": "application/json",
@@ -207,7 +207,7 @@ const useFirebase = () => {
 };
  const saveLearner = (email,displayName,age,address,phone,nid,profile,carType, method) => {
   const user1 = { email, displayName,age,area,address,phone,nid,profile,carType,userType:"Learner" };
-  fetch("http://localhost:5000/learner", {
+  fetch("https://hidden-sands-08000.herokuapp.com/learner", {
     method: method,
     headers: {
       "content-type": "application/json",
@@ -218,7 +218,7 @@ const useFirebase = () => {
 
 //admin check
 useEffect(() => {
-  fetch(`http://localhost:5000/users/${user.email}`)
+  fetch(`https://hidden-sands-08000.herokuapp.com/users/${user.email}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);

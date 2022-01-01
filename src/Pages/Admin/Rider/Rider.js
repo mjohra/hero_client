@@ -31,7 +31,7 @@ const Rider = () => {
     },
   ];
   useEffect(() => {
-    fetch("http://localhost:5000/rider")
+    fetch("https://hidden-sands-08000.herokuapp.com/rider")
       .then((res) => res.json())
       .then((data) => setInformation(data));
   }, []);
